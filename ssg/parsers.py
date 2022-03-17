@@ -3,7 +3,7 @@ from pathlib import Path
 import shutil
 
 class Parser:
-    extentions: typing.List[str] = []
+    extentions: List[str] = []
     
     def valid_extension(self, extension):
         return extension in self.extensions
@@ -29,7 +29,3 @@ class ResourceParser(Parser):
     def parse(self, path, source, dest):
         Parser.copy(self, path, source, dest)
         self.copy(path, source, dest)
-        
-        
-        
-        
